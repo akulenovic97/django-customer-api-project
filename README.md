@@ -33,6 +33,6 @@ You can also use the [Postman](https://www.postman.com/) client to send JSON as 
 
 ## Main components that couldn't be implemented in time
 1. Dockerization of the application (kept receiving issue of password authentication, created 'dockerization-try' for later review on implementation).
-2. Foreign key implementation on Subscription and Gifts tables.
+2. Foreign key implementation on Subscription and Gifts tables.  
   Subscription would have customer_id.   
   Gifts should have a new entry in Subscription then have subscription_id and customer_id as foreign keys.
