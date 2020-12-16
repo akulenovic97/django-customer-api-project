@@ -15,13 +15,23 @@ A basic REST API project built with Django + postgres that parses sample Custome
 4. Stay in the directory and run the web server with this command:
   python manage.py runserver
 
-Once these steps are run, the API endpoint is running and can accept JSON data for POST/PUT operations in your local database.
+Once these steps are run, the API endpoint is running locally and can accept JSON data for POST/PUT operations in your local database.
 
 The POST API endpoint is: http://127.0.0.1:8000/api/customers
 
 The PUT API endpoint is: http://127.0.0.1:8000/api/customers/update
 
-## What couldn't be implemented in time
+You can use cURL requests if you want to send a JSON file to one of the endpoints:
+```
+curl -X POST -H "Content-Type: application/json" -d @test_file.json http://127.0.0.1:8000/api/customers
+```
+```
+curl -X POST -H "Content-Type: application/json" -d @test_file.json http://127.0.0.1:8000/api/customers/update
+```
+
+You can also use the [Postman](https://www.postman.com/) client to send JSON as well.
+
+## Main components that couldn't be implemented in time
 1. Dockerization of the application (kept receiving issue of password authentication, created 'dockerization-try' for later review on implementation).
 2. Foreign key implementation on Subscription and Gifts tables.
   Subscription would have customer_id.   
